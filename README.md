@@ -1,5 +1,7 @@
 # 📚 RAG-Based Smart Document Analyzer (Flask + LangChain)
 
+---
+
 ## 🚀 Overview
 This project is a **Retrieval-Augmented Generation (RAG) system** built using Flask and LangChain.
 
@@ -30,5 +32,6 @@ The system retrieves relevant document chunks using vector search and generates 
 - HTML (Frontend Templates)  
 
 ---
+
 ## 👩‍💻 Author
 Jayalakshmi T
