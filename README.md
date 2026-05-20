@@ -122,8 +122,8 @@ RAG-Deploy/
 ```bash
 1. git clone https://github.com/JayalakshmiT-2708/RAG-Deploy.git
 2. cd RAG-Deploy
-3. python -m venv venv
+3. python uv venv
 4. venv\Scripts\activate   # Windows
-5. pip install -r requirements.txt
+5. uv pip install -r requirements.txt
 6. python app.py
 7. Open: http://127.0.0.1:5000
