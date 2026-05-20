@@ -1,0 +1,34 @@
+# LangChain core
+langchain
+langchain-core
+langchain-community
+
+# Mistral LLM
+langchain-mistralai
+mistralai
+
+# Vector DB
+chromadb
+
+# Embeddings
+sentence-transformers
+
+# PDF handling
+pypdf
+
+# Text processing
+tiktoken
+
+# Environment variables
+python-dotenv
+
+# Web Framework
+flask
+
+# Data handling
+numpy
+pandas
+
+# Utilities
+requests
+tqdm

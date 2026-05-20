@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RAG Document Assistant</title>
+    <style>
+        body {
+            font-family: Arial;
+            margin: 40px;
+            background: #f4f4f4;
+        }
+
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            width: 60%;
+            margin: auto;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        input, button {
+            padding: 10px;
+            margin: 10px 0;
+            width: 100%;
+        }
+
+        #response {
+            margin-top: 20px;
+            padding: 10px;
+            background: #e8f5e9;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h2>📚 RAG Document Q&A System</h2>
+
+    <!-- Upload PDF -->
+    <h3>Upload PDF</h3>
+    <input type="file" id="fileInput">
+    <button onclick="uploadPDF()">Upload & Process</button>
+
+    <hr>
+
+    <!-- Ask Question -->
+    <h3>Ask Question</h3>
+    <input type="text" id="question" placeholder="Enter your question">
+    <button onclick="askQuestion()">Ask</button>
+
+    <!-- Response -->
+    <div id="response"></div>
+
+</div>
+
+<script>
+    function uploadPDF() {
+        let fileInput = document.getElementById("fileInput");
+        let file = fileInput.files[0];
+
+        let formData = new FormData();
+        formData.append("file", file);
+
+        fetch("/upload", {
+            method: "POST",
+            body: formData
+        })
+        .then(res => res.json())
+        .then(data => {
+            alert(data.message);
+        });
+    }
+
+    function askQuestion() {
+        let question = document.getElementById("question").value;
+
+        fetch("/ask", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ question: question })
+        })
+        .then(res => res.json())
+        .then(data => {
+            document.getElementById("response").innerHTML =
+                "<b>Answer:</b> " + data.answer;
+        });
+    }
+</script>
+
+</body>
+</html>
