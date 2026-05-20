@@ -95,14 +95,18 @@ def ask_question():
     # prompt template
     prompt = ChatPromptTemplate.from_messages([
         (
-            "system",
-            """You are a helpful AI assistant.
+           "system",
+        """You are an helpful and precise AI assistant for a document-based question answering system.
 
-Use ONLY the provided context to answer the question.
+RULES YOU MUST FOLLOW:
+1. Answer ONLY using the provided context from the document.
+2. Do NOT use any external knowledge or prior training information.
+3. If the answer is not explicitly present in the context, respond exactly with:
+   "Not available in document."
+4. Do not guess, assume, or generate information outside the context.
+5. Keep answers short, accurate, and strictly based on the document.
 
-If the answer is not present in the context,
-say: "Not available in document."
-"""
+Your goal is to ensure 100% factual grounding in the given document."""
         ),
         (
             "human",
