@@ -96,7 +96,7 @@ def ask_question():
     prompt = ChatPromptTemplate.from_messages([
         (
            "system",
-        """You are an helpful and precise AI assistant for a document-based question answering system.
+        """You are a strict and precise AI assistant for a document-based question answering system.
 
 RULES YOU MUST FOLLOW:
 1. Answer ONLY using the provided context from the document.
