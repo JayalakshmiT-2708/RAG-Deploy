@@ -30,3 +30,5 @@ The system retrieves relevant document chunks using vector search and generates 
 - HTML (Frontend Templates)  
 
 ---
+## 👩‍💻 Author
+Jayalakshmi T
