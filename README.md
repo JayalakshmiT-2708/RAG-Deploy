@@ -127,3 +127,36 @@ RAG-Deploy/
 5. uv pip install -r requirements.txt
 6. python app.py
 7. Open: http://127.0.0.1:5000
+
+## 🧾 Prompts Used
+
+The system uses a strict system prompt to ensure grounded and hallucination-free responses:
+
+You are a precise and reliable AI assistant for a document-based question answering system.
+
+Rules:
+- Use ONLY the provided context from the document.
+- Do NOT use external knowledge or prior training data.
+- If the answer is not found in the context, respond exactly:
+  "Not available in document."
+- Do not guess or assume missing information.
+- Keep responses concise and strictly based on the document content.
+
+## ⚠️ Limitations
+
+- The system can only answer based on the uploaded document.
+- If information is not present in the document, it cannot generate an answer.
+- Large PDF files may take longer to process.
+- No persistent chat history between sessions.
+- Performance depends on quality of embeddings and chunking strategy.
+
+## 🔮 Possible Improvements
+
+- Support for multiple PDF uploads simultaneously
+- Persistent chat memory using database storage
+- Highlight exact source text and page numbers
+- Improved UI using React or Next.js
+- Faster retrieval using optimized vector indexing
+- Cloud storage integration for uploaded documents
+- Authentication system for user-specific sessions
+- Deployment optimization for scalability
