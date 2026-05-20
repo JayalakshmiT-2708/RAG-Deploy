@@ -119,20 +119,11 @@ RAG-Deploy/
 
 ## ⚙️ Setup Instructions
 
-###  Clone the Repository
 ```bash
-git clone https://github.com/JayalakshmiT-2708/RAG-Deploy.git
-cd RAG-Deploy
-
-###  Create Virtual Environment
-python uv venv
-venv\Scripts\activate   # Windows
-
-###  Install Dependencies
- uv pip install -r requirements.txt
-
-###  Run the Application
-python app.py
-
-###  Open in Browser
-http://127.0.0.1:5000
+1. git clone https://github.com/JayalakshmiT-2708/RAG-Deploy.git
+2. cd RAG-Deploy
+3. python -m venv venv
+4. venv\Scripts\activate   # Windows
+5. pip install -r requirements.txt
+6. python app.py
+7. Open: http://127.0.0.1:5000
